@@ -4,7 +4,7 @@ import pandas as pd
 import os
 
 
-model_path = os.path.dirname(__file__ , "model.pkl")
+model_path = os.path.join(os.path.dirname(__file__) , "model.pkl")
 model = joblib.load(model_path)
 
 
@@ -137,6 +137,7 @@ if submit:
 
     st.error(f"⚠ High Churn Risk: {churn_prob:.2f}")
     st.success(f"✅ Likely to Stay: {stay_prob:.2f}")
+
 
 
 
