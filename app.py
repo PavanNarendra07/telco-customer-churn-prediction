@@ -16,19 +16,6 @@ st.set_page_config(
 st.title("📊 Telco Customer Churn Prediction")
 st.markdown("Predict whether a customer is likely to churn.")
 
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #A9A9A9;
-    }
-    .stSidebar {
-    background-color: #FFFAF0   ;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 # Sidebar
 st.sidebar.header("About")
@@ -152,6 +139,7 @@ if submit:
 
     st.error(f"⚠ High Churn Risk: {churn_prob:.2f}")
     st.success(f"✅ Likely to Stay: {stay_prob:.2f}")
+
 
 
 
